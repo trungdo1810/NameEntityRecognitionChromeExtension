@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NER</title>
+        <script src="jquery-3.1.0.min.js"></script>        
+    </head>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            justify-content: center;
+            max-width: 420px;
+        }
+        h1 {
+            width: 300px;
+            display: flex;
+        }
+        .btn-push{
+            position: relative;
+            top: 0px;
+            font-family: "san serif";
+            text-decoration: none;
+            font-size: 25px;
+            background: #f7f7f7;
+            padding: 5px 15px;
+            margin: 0 10px;
+            margin-bottom: 1rem;
+            margin-top:0.5em;
+            border: 1px solid #c4c4c4;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 5px 0px #c4c4c4;
+            -moz-box-shadow: 0px 5px 0px #c4c4c4;
+            -ms-box-shadow: 0px 5px 0px #c4c4c4;
+            -o-box-shadow: 0px 5px 0px #c4c4c4;
+            box-shadow: 0px 5px 0px #c4c4c4;
+            color: #222;
+            text-shadow: 1px 1px 1px #fff;
+            -webkit-transition: All 250ms ease;
+            -moz-transition: All 250ms ease;
+            -o-transition: All 250ms ease;
+            -ms-transition: All 250ms ease;
+            transition: All 250ms ease;
+        }
+        .btn-push:active {
+            position: relative;
+            top: 5px;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            -ms-box-shadow: none !important;
+            -o-box-shadow: none !important;
+            box-shadow: none !important;
+            -webkit-transition: All 250ms ease;
+            -moz-transition: All 250ms ease;
+            -o-transition: All 250ms ease;
+            -ms-transition: All 250ms ease;
+            transition: All 250ms ease;
+        }
+        .btn-push.green {
+            background: #50c046;
+            color: #fff;
+            border: 1px solid #46963f;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 5px 0px #46963f;
+            -moz-box-shadow: 0px 5px 0px #46963f;
+            -ms-box-shadow: 0px 5px 0px #46963f;
+            -o-box-shadow: 0px 5px 0px #46963f;
+            box-shadow: 0px 5px 0px #46963f;
+            text-shadow: 1px 1px 1px #46963f;
+        }
+        #textShowArea{
+            text-align: left;
+            margin-left: 1em;
+            margin-right: 1em;
+            font-size: medium;
+            
+        }
+    </style>
+    <body>
+        <h1>Name Entity Scanner</h1>
+        <div id="textShowArea"></div>
+        <!-- <input type="text" id="highlightInput"> -->
+        <button class="btn-push green" id="scan-btn">SCAN</button>
+        <script src="popup.js"></script>
+    </body>
+</html>
