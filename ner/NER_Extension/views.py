@@ -15,7 +15,7 @@ def index(request):
     return HttpResponse("Hello, world. You're at the NER Extension index.")
 
 
-def receive_text(request):
+def NERSCan(request):
     topic = request.GET.get('topic', None)
     print("----------------------------")
 

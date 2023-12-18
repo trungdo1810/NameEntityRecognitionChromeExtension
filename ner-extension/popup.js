@@ -10,10 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       if (selection && selection[0].length > 0) {
-        console.log(2);
-        const selectedText = selection[0];
 
-        
+        const selectedText = selection[0];        
 
         chrome.runtime.sendMessage(
           {topic: selectedText},
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
               wordORG: result.org_words
             });
             
-            console.log(highlightedText);
             
             document.getElementById('textShowArea').innerHTML = highlightedText;
             // const highlightORGWord = result.org_words;
@@ -47,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (wordPER.length > 0) {
       for (let i = 0; i < wordPER.length; i++) {
-        console.log(i);
-        console.log(wordPER[i]);
         const regex1 = new RegExp(wordPER[i], 'gi');
         highlightedText = highlightedText.replace(regex1, match => `<span style="background-color: #90EE90">${match}</span>`);
       }      

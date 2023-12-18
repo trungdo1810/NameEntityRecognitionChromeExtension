@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # path('wiki/', include('wiki.urls')),
     path('NER_Extension/', include('NER_Extension.urls')),
     path('admin/', admin.site.urls),
 ]
