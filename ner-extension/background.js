@@ -4,7 +4,7 @@ var serverhost = 'http://127.0.0.1:8000';
 		function(request, sender, sendResponse) {
 		  
 			  
-			var url = serverhost + '/NER_Extension/receive_text/?topic='+ encodeURIComponent(request.topic) ;
+			var url = serverhost + '/NER_Extension/NERSCan/?topic='+ encodeURIComponent(request.topic) ;
 			
 			console.log(url);
 			
